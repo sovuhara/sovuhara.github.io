@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Dynamic Island for Mac — free download">Dynamic Island для Mac — скачать бесплатно</title>
+<meta name="description" content="Dynamic Island для macOS: календарь, плеер, системные виджеты, полка для файлов, история буфера обмена и Live Activities у верхней кромки экрана. Бесплатно, открытый исходный код, без зависимостей.">
+<meta name="author" content="Мансур Абубакаров">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/appicon.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dynamic Island для Mac — скачать бесплатно">
+<meta property="og:description" content="Календарь, плеер, полка, буфер обмена и Live Activities у верхней кромки экрана. macOS 14+, Apple Silicon и Intel.">
+<meta property="og:image" content="../assets/appicon-1024.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="project">
+
+<div class="page">
+  <div class="stage stage-project">
+    <svg class="scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#151a24"/>
+          <stop offset="0.55" stop-color="#0d1017"/>
+          <stop offset="1" stop-color="#080a0e"/>
+        </linearGradient>
+        <radialGradient id="moon" cx="0.78" cy="0.16" r="0.42">
+          <stop offset="0" stop-color="#8ea6c8" stop-opacity="0.28"/>
+          <stop offset="1" stop-color="#8ea6c8" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="900" fill="url(#sky)"/>
+      <rect width="1440" height="900" fill="url(#moon)"/>
+      <g fill="#c9d6ea">
+        <circle cx="180" cy="120" r="1.3" opacity="0.55"/><circle cx="320" cy="210" r="1" opacity="0.4"/>
+        <circle cx="520" cy="90" r="1.1" opacity="0.5"/><circle cx="700" cy="180" r="0.9" opacity="0.35"/>
+        <circle cx="900" cy="110" r="1.2" opacity="0.45"/><circle cx="1120" cy="230" r="1" opacity="0.4"/>
+        <circle cx="1290" cy="140" r="1.3" opacity="0.5"/><circle cx="1010" cy="300" r="0.9" opacity="0.3"/>
+      </g>
+      <path d="M0 690 L250 520 L420 640 L610 470 L840 660 L1020 560 L1230 700 L1440 590 L1440 900 L0 900 Z" fill="#10141d"/>
+      <path d="M0 780 L210 660 L430 770 L680 620 L900 760 L1130 670 L1440 790 L1440 900 L0 900 Z" fill="#0c0f16"/>
+      <path d="M0 850 L300 780 L560 850 L820 770 L1100 850 L1440 790 L1440 900 L0 900 Z" fill="#080a0e"/>
+    </svg>
+
+    <header class="topbar">
+      <a class="logo" href="../" aria-label="Мансур Абубакаров"><span data-en="MA">МА</span></a>
+      <nav class="topnav">
+        <a href="../" data-en="HOME">ГЛАВНАЯ</a>
+        <a href="#install" data-en="INSTALL">УСТАНОВКА</a>
+        <a href="https://github.com/sovuhara/DynamicIsland">GITHUB</a>
+        <button class="lang" id="lang" type="button">EN</button>
+      </nav>
+    </header>
+
+    <div class="stage-body project-hero" id="top">
+      <span class="tag">&lt;h1&gt;</span>
+      <img class="hero-icon" src="../assets/appicon.png" alt="Иконка Dynamic Island" width="104" height="104">
+      <h1>Dynamic Island</h1>
+      <span class="tag">&lt;/h1&gt;</span>
+      <p class="lede" data-en="A panel at the top edge of your Mac&#39;s screen: it hugs the notch on Macs that have one, and floats as a pill on Macs that don&#39;t. Calendar, player, system widgets, a shelf for files, clipboard history and Live Activities — all in one place.">Панель у верхней кромки экрана: на Маках с чёлкой обнимает вырез, на Маках без чёлки — плавающая пилюля. Календарь, плеер, системные виджеты, полка для файлов, история буфера обмена и Live Activities — всё в одном месте.</p>
+
+      <div class="actions">
+        <a class="solid-btn" href="https://github.com/sovuhara/DynamicIsland/releases/latest/download/DynamicIsland.zip" data-en="DOWNLOAD FOR MAC">СКАЧАТЬ ДЛЯ MAC</a>
+        <a class="ghost-btn" href="https://github.com/sovuhara/DynamicIsland" data-en="SOURCE CODE">ИСХОДНЫЙ КОД</a>
+      </div>
+
+      <p class="hero-meta"><b data-en="Version 1.1">Версия 1.1</b> · macOS 14+ · <span data-en="Apple Silicon and Intel">Apple Silicon и Intel</span> · 2,1 <span data-en="MB">МБ</span> · <span data-en="MIT license">лицензия MIT</span></p>
+
+      <div class="island-stage">
+        <div class="island" id="island" role="button" tabindex="0" aria-label="Демонстрация острова">
+          <div class="island-face compact">
+            <span class="dot"></span>
+            <span class="eq"><i></i><i></i><i></i><i></i></span>
+          </div>
+          <div class="island-face expanded">
+            <span class="art"><i></i></span>
+            <span class="track">
+              <b>Dynamic Island</b>
+              <span data-en="for macOS · now playing">для macOS · что играет</span>
+              <span class="bar"><i></i></span>
+            </span>
+            <span class="keys">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 6v12l-9-6 9-6zM7 6h2v12H7z"/></svg>
+              <span class="big"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg></span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6l9 6-9 6V6zm11 0h2v12h-2z"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <p class="island-hint" data-en="Tap the pill">Нажми на пилюлю</p>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="shell reveal" id="features">
+    <div class="sec-head">
+      <div class="kicker" data-en="What it does">Что умеет</div>
+      <h2 data-en="Five panels, switched by a swipe">Пять панелей, переключаются свайпом</h2>
+      <p data-en="Any of them can be turned off, reordered or opened by a hotkey or from the terminal.">Любую можно выключить, переставить местами, открыть горячей клавишей или из терминала.</p>
+    </div>
+    <div class="grid">
+      <article class="feature">
+        <h3 data-en="Calendar">Календарь</h3>
+        <p data-en="Today, the month grid and upcoming events. If a meeting has a Zoom, Meet or Teams link, a Join button shows up — and a few minutes before the start the island reminds you itself.">День, сетка месяца и ближайшие события. Если у встречи есть ссылка на Zoom, Meet или Teams, появляется кнопка «Присоединиться», а за несколько минут до начала остров напомнит сам.</p>
+        <div class="shot"><img src="../assets/shots/calendar.png" alt="Панель календаря" loading="lazy" width="844" height="490"></div>
+      </article>
+      <article class="feature">
+        <h3 data-en="Player">Плеер</h3>
+        <p data-en="Artwork, a marquee title and a scrubber. Now Playing is read system-wide, so any player shows up: Music, Spotify, a browser tab, QuickTime. Output devices are switched right in the panel.">Обложка, бегущая строка и перемотка. «Что играет» читается системно, поэтому виден любой плеер: Music, Spotify, вкладка браузера, QuickTime. Устройство вывода переключается прямо в панели.</p>
+        <div class="shot"><img src="../assets/shots/player.png" alt="Панель плеера" loading="lazy" width="844" height="490"></div>
+      </article>
+      <article class="feature">
+        <h3 data-en="System">Система</h3>
+        <p data-en="Up to four cards picked from eight: battery, memory, disk, CPU, network, accessory charge, a timer with presets and your own quick actions.">До четырёх карточек на выбор из восьми: батарея, память, диск, процессор, сеть, заряд аксессуаров, таймер с пресетами и свои быстрые действия.</p>
+        <div class="shot"><img src="../assets/shots/widgets.png" alt="Панель системных виджетов" loading="lazy" width="844" height="490"></div>
+      </article>
+      <article class="feature">
+        <h3 data-en="Shelf">Полка</h3>
+        <p data-en="Drag files onto the island and drag them back out when you need them. It remembers files between launches, takes text and images, and can share them.">Перетащи файлы на остров и утащи обратно, когда понадобятся. Помнит файлы между запусками, принимает текст и картинки, умеет «Поделиться».</p>
+        <div class="shot"><img src="../assets/shots/shelf.png" alt="Панель полки с файлами" loading="lazy" width="844" height="490"></div>
+      </article>
+      <article class="feature">
+        <h3 data-en="Clipboard">Буфер обмена</h3>
+        <p data-en="Copy history — a tap puts an entry back on the clipboard. Passwords from password managers never make it into the history.">История копирований — тап возвращает запись в буфер. Пароли из менеджеров паролей в историю не попадают.</p>
+        <div class="shot"><img src="../assets/shots/clipboard.png" alt="Панель истории буфера обмена" loading="lazy" width="844" height="490"></div>
+      </article>
+      <article class="feature">
+        <h3>Live Activities</h3>
+        <p data-en="Short cards in the collapsed state: a track change, power plugged in, low battery, AirPods connecting with their charge level, timers, meetings — and your own events from scripts.">Короткие карточки в свёрнутом виде: смена трека, подключение питания, низкий заряд, подключение AirPods с уровнем заряда, таймеры, встречи — и свои события из скриптов.</p>
+        <div class="shot stack">
+          <img src="../assets/shots/activity-notify.png" alt="Карточка уведомления" loading="lazy" width="592" height="115">
+          <img src="../assets/shots/activity-progress.png" alt="Карточка прогресса" loading="lazy" width="424" height="115">
+        </div>
+      </article>
+    </div>
+    <p class="aside" data-en="Everything is configured in a separate window with a sidebar — ⌘, from the menu bar icon. There are no buttons on the island itself.">Всё настраивается в отдельном окне с сайдбаром — ⌘, из значка в строке меню. На самом острове кнопок нет.</p>
+    <div class="shot"><img src="../assets/shots/settings.png" alt="Окно настроек" loading="lazy" width="1552" height="1264"></div>
+  </section>
+
+  <section class="shell reveal" id="install">
+    <div class="sec-head">
+      <div class="kicker" data-en="Install">Установка</div>
+      <h2 data-en="Three steps, about a minute">Три шага, примерно минута</h2>
+      <p data-en="There is no installer: the app is a single bundle you drag into Applications.">Установщика нет: приложение — один бандл, который переносится в «Программы».</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3 data-en="Download and unpack the archive">Скачай и распакуй архив</h3>
+        <p data-en="You get Dynamic Island.app — drag it into the Applications folder.">Получится «Dynamic Island.app» — перетащи его в папку «Программы».</p>
+      </div>
+      <div class="step">
+        <h3 data-en="Open it the first time via right click">Открой первый раз через правую кнопку</h3>
+        <p data-en="Right click on the app → Open → Open. A regular double click will refuse the first time (see the note below).">Правая кнопка по приложению → «Открыть» → «Открыть». Обычный двойной клик в первый раз откажет — почему, ниже.</p>
+      </div>
+      <div class="step">
+        <h3 data-en="Grant permissions as you go">Выдай разрешения по ходу дела</h3>
+        <p data-en="Calendar, Automation and Accessibility are asked for only when you first use the matching feature. Everything works without them too — those features just stay quiet.">Календарь, Автоматизация и Универсальный доступ спрашиваются только когда впервые понадобятся. Без них всё тоже работает — просто эти функции молчат.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <p style="margin:0 0 8px" data-en="&lt;b&gt;Why macOS says the developer cannot be verified.&lt;/b&gt; The app is signed locally rather than with a paid Apple Developer certificate, so it is not notarized. That is exactly why the source code is fully open — you can read it and build it yourself. Right click → Open is enough; if you would rather use the terminal:"><b>Почему macOS говорит, что разработчик не проверен.</b> Приложение подписано локально, а не платным сертификатом Apple Developer, поэтому не заверено нотариально. Именно поэтому исходный код открыт полностью — его можно прочитать и собрать самому. Правой кнопкой → «Открыть» достаточно; если удобнее через терминал:</p>
+      <div class="code"><span class="k">xattr</span> -dr com.apple.quarantine <span class="s">"/Applications/Dynamic Island.app"</span></div>
+    </div>
+
+    <div class="sec-head" style="margin-top:56px">
+      <div class="kicker" data-en="Or build it yourself">Или собери сам</div>
+      <h2 data-en="Two commands, no dependencies">Две команды, без зависимостей</h2>
+      <p data-en="You need macOS 14+ and Xcode Command Line Tools. There are no third-party packages: build.sh calls swiftc directly.">Нужны macOS 14+ и Xcode Command Line Tools. Сторонних пакетов нет: build.sh зовёт swiftc напрямую.</p>
+    </div>
+    <div class="code"><span class="k">git</span> clone https://github.com/sovuhara/DynamicIsland.git
+<span class="k">cd</span> DynamicIsland && ./build.sh && <span class="k">open</span> <span class="s">"build/Dynamic Island.app"</span></div>
+  </section>
+
+  <section class="shell reveal" id="cli">
+    <div class="sec-head">
+      <div class="kicker" data-en="Scriptable">Скриптуется</div>
+      <h2 data-en="A di command and a URL scheme">Команда di и URL-схема</h2>
+      <p data-en="Anything the island shows can be driven from a script, a Makefile or CI.">Всё, что показывает остров, можно дёрнуть из скрипта, Makefile или CI.</p>
+    </div>
+    <div class="code"><span class="c"># уведомление, прогресс и таймер прямо в острове</span>
+<span class="k">di</span> notify <span class="s">"Сборка готова"</span> <span class="s">"12.4 с"</span> --symbol hammer.fill --color green
+<span class="k">di</span> progress deploy 0.62 --title <span class="s">"Деплой"</span> --color blue
+<span class="k">di</span> timer 5 <span class="s">"Чай"</span>
+
+<span class="c"># полка, буфер обмена и настройки</span>
+<span class="k">di</span> shelf ~/Downloads/report.pdf
+<span class="k">di</span> clip <span class="s">"текст в буфер"</span>
+<span class="k">di</span> set accent <span class="s">"#0A84FF"</span></div>
+
+    <div class="sec-head" style="margin-top:56px">
+      <div class="kicker" data-en="Updates">Обновления</div>
+      <h2 data-en="Optional, and off until you turn it on">По желанию и молчат, пока не включишь</h2>
+      <p data-en="The app has its own updater instead of Sparkle — that would have been a dependency. Until you paste a manifest URL into the settings, it never touches the network. Paste this one to get updates from here:">У приложения свой апдейтер вместо Sparkle — тот стал бы зависимостью. Пока адрес манифеста в настройках пуст, приложение вообще не ходит в сеть. Вставь этот адрес, чтобы получать обновления отсюда:</p>
+    </div>
+    <div class="code">https://sovuhara.github.io/dynamic-island/appcast.json</div>
+
+    <p class="aside" style="margin-top:40px"><a href="../" data-en="← Back to all projects">← Ко всем проектам</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="shell">
+    <span data-en="© 2026 Mansur Abubakarov">© 2026 Мансур Абубакаров</span>
+    <span><a href="https://github.com/sovuhara/DynamicIsland" data-en="Source code">Исходный код</a> · <a href="https://github.com/sovuhara/DynamicIsland/blob/main/LICENSE" data-en="MIT license">Лицензия MIT</a></span>
+  </div>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

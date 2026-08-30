@@ -1,0 +1,6 @@
+{
+  "version": "1.1",
+  "notes": "Первый публичный релиз. Универсальная сборка: Apple Silicon и Intel. Иконка приложения, календарь, плеер, системные виджеты, полка, история буфера обмена и Live Activities.",
+  "url": "https://github.com/sovuhara/DynamicIsland/releases/download/v1.1/DynamicIsland.zip",
+  "sha256": "b1cd07c17c03f7312ae5c28aa79dbe72bf742a767d5dd9cc0a90511dbc880c63"
+}
