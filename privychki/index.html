@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Привычки</title>
+<style>
+  :root { color-scheme: light dark; --ground: #F7F7F6; --ink: #2F3231; --on-ink: #FFFFFF; --gray: #626564; --field: #ECECEB; --line: #E6E6E5; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground: #1B1D1C; --ink: #F1F1F0; --on-ink: #1B1D1C; --gray: #A6A9A8; --field: #2A2D2C; --line: #2F3231; }
+  }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--ground); color: var(--ink);
+         font: 17px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { padding: 32px 20px; width: 100%; max-width: 380px; box-sizing: border-box; }
+  img { width: 96px; height: 96px; border-radius: 22px; border: 1px solid var(--line); display: block; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -1px; font-weight: 600; margin: 20px 0 6px; }
+  p { color: var(--gray); margin: 0; }
+  a.button { display: block; text-align: center; text-decoration: none; font-weight: 600; padding: 17px; border-radius: 28px; margin-top: 10px; }
+  a.primary { background: var(--ink); color: var(--on-ink); }
+  a.secondary { background: var(--field); color: var(--ink); }
+  section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .code { font-size: 28px; font-weight: 600; letter-spacing: 3px; color: var(--ink); margin: 6px 0 4px; }
+  footer { margin-top: 28px; font-size: 14px; }
+  footer a { color: var(--gray); }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <img src="icon-512.png" alt="">
+  <h1>Привычки</h1>
+  <p id="lead">Отмечайте каждый день и делитесь прогрессом с друзьями.</p>
+
+  <section id="invite" hidden>
+    <p>Вас пригласили в друзья. Код приглашения:</p>
+    <div class="code" id="code"></div>
+    <p>Сначала установите приложение и войдите, затем вернитесь сюда и откройте приглашение.</p>
+    <a class="button secondary" id="open" href="#">Открыть приглашение</a>
+  </section>
+
+  <section>
+    <a class="button primary" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fsovuhara.github.io%2Fprivychki%2Fmanifest.plist">Установить</a>
+    <p style="margin-top: 14px; font-size: 14px">Откройте эту страницу в Safari на iPhone. После нажатия вернитесь на экран «Домой» — приложение появится там. Сборка 1.</p>
+  </section>
+
+  <footer><a href="privacy.html">Конфиденциальность</a> · <a href="terms.html">Условия</a></footer>
+</main>
+<script>
+  // Ссылка-приглашение: ?c=КОД. Код допускает только буквы и цифры.
+  var code = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 16);
+  if (code) {
+    document.getElementById('code').textContent = code;
+    document.getElementById('open').href = 'privychki://invite/' + code;
+    document.getElementById('invite').hidden = false;
+  }
+</script>
+</body>
+</html>
