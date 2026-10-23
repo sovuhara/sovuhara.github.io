@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>kassa</title>
+<style>
+  :root { --ink: #111111; --gray: #6B6B6B; --surface: #F4F4F4; --green: #00D64F; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #FFFFFF; color: var(--ink);
+         font: 17px/1.45 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; }
+  main { padding: 32px 20px; width: 100%; max-width: 400px; box-sizing: border-box; }
+  img { width: 112px; height: 112px; border-radius: 26px; display: block; }
+  h1 { font-size: 56px; line-height: 1; letter-spacing: -3px; font-weight: 800; margin: 18px 0 8px; }
+  p { color: var(--gray); margin: 0; }
+  a.button { display: block; text-align: center; text-decoration: none; font-weight: 700; padding: 17px; border-radius: 28px; margin-top: 10px; }
+  a.primary { background: var(--ink); color: #FFFFFF; }
+  a.secondary { background: var(--surface); color: var(--ink); }
+  section { margin-top: 26px; }
+  small { display: block; color: var(--gray); font-size: 14px; margin-top: 10px; }
+  .code { font-size: 28px; font-weight: 800; letter-spacing: 4px; color: var(--ink); }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <img src="icon-512.png" alt="">
+  <h1>kassa</h1>
+  <p>Общие покупки и уборка в квартире.</p>
+
+  <section id="invite" hidden>
+    <p>Код квартиры:</p>
+    <div class="code" id="code"></div>
+    <p>Установите приложение и введите этот код.</p>
+  </section>
+
+  <section id="ios">
+    <a class="button primary" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fsovuhara.github.io%2Fkassa%2Fmanifest.plist">Установить на iPhone</a>
+    <small>Откройте в Safari. После нажатия вернитесь на экран «Домой». Сборка 1.</small>
+  </section>
+  <section id="android">
+    <a class="button primary" href="kassa.apk" download>Скачать для Android · 37 МБ</a>
+    <small>Откройте скачанный файл и разрешите установку из этого источника.</small>
+  </section>
+  <section>
+    <a class="button secondary" id="web" href="https://kassa.89-169-38-231.sslip.io">Открыть веб-версию</a>
+    <small>iPhone: Safari → «Поделиться» → «На экран „Домой“». Android: Chrome → меню → «Добавить на главный экран».</small>
+  </section>
+</main>
+<script>
+  var ua = navigator.userAgent;
+  var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/.test(ua);
+  if (isIOS) document.getElementById('android').hidden = true;
+  if (isAndroid) document.getElementById('ios').hidden = true;
+  if (!document.querySelector('a[href="kassa.apk"]') || !true) document.getElementById('android').hidden = true;
+  var code = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+  if (code) {
+    document.getElementById('code').textContent = code;
+    document.getElementById('invite').hidden = false;
+    document.getElementById('web').href = 'https://kassa.89-169-38-231.sslip.io/?c=' + code;
+  }
+</script>
+</body>
+</html>
