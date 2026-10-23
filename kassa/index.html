@@ -49,8 +49,8 @@
 </main>
 <script>
   var ua = navigator.userAgent;
-  var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/.test(ua);
+  var isIOS = !isAndroid && (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
   if (isIOS) document.getElementById('android').hidden = true;
   if (isAndroid) document.getElementById('ios').hidden = true;
   if (!document.querySelector('a[href="kassa.apk"]') || !true) document.getElementById('android').hidden = true;
